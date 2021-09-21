@@ -1,4 +1,6 @@
 env\Scripts\activate
 set FLASK_APP=app.py
 flask run
+
+ejecutar : python app.py
 git push origin main
