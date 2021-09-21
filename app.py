@@ -9,8 +9,9 @@ def index():
 
 @app.route('/params/')
 @app.route('/params/<name>/')
-def params (name = 'este es un valor por default'):
-  return 'el parametro es : {}'.format(name)
+@app.route('/params/<name>/<last_name>')
+def params (name = 'volor por defecto', last_name = 'sin apellido'):
+  return 'el parametro es : {} {}'.format(name, last_name)
 
 if __name__ == '__main__':
   app.run(debug = True, port= 8050)  
