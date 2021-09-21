@@ -7,7 +7,9 @@ app = Flask(__name__)
 @app.route('/user/')
 @app.route('/user/<name>')
 def user(name='alexander'):
-  return render_template('index.html', nombre=name)
+  age = 19
+  my_list = [1,2,3,4]
+  return render_template('index.html', nombre=name, age = age, list = my_list)
 
 if __name__ == '__main__':
-  app.run(debug = True, port= 8001)
+  app.run(debug = True, port= 5000)
