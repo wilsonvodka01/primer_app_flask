@@ -1,17 +1,10 @@
 from flask import Flask
-from flask import Request
-
+from flask import render_template
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-  return 'hola mundo'
-
-@app.route('/params/')
-@app.route('/params/<name>/')
-@app.route('/params/<name>/<int:num>')
-def params (name = 'volor por defecto', num = 'sin apellido'):
-  return 'el parametro es : {} {}'.format(name, num)
-
+  return render_template('index.html')
+  
 if __name__ == '__main__':
-  app.run(debug = True, port= 8050)  
+  app.run(debug = True, port= 5050)
